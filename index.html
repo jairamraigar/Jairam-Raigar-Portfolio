@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/png" href="assests/iit/iitj_logo_o.png">
+<title>Jairam Raigar, PhD — Postdoctoral Research Fellow</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F0F3FA;
+  --bg2:#FFFFFF;
+  --bg3:#E8EDF8;
+  --navy:#07112A;
+  --navy2:#0F1E40;
+  --blue:#1742C8;
+  --blue2:#2457E8;
+  --blue3:#3B72F6;
+  --blue-light:#EEF3FF;
+  --blue-mid:#C3D3FC;
+  --teal:#0B8A7F;
+  --teal2:#0EA89A;
+  --teal-light:#EDFAF8;
+  --gold:#9A4A00;
+  --gold-light:#FFF6E8;
+  --gold-mid:#F5D08A;
+  --text:#18243C;
+  --text2:#48607A;
+  --text3:#8A9AB8;
+  --border:#DCE3F0;
+  --border2:#C4CFEA;
+  --r:14px;
+  --r2:20px;
+  --sh:0 2px 8px rgba(7,17,42,0.07),0 6px 24px rgba(7,17,42,0.05);
+  --sh2:0 12px 48px rgba(7,17,42,0.13),0 4px 16px rgba(7,17,42,0.07);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Outfit',sans-serif;
+  font-weight:400;
+  line-height:1.7;
+  overflow-x:hidden;
+  padding-top:68px;
+}
+
+/* ========= NAVBAR ========= */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5.5vw;
+  background:rgba(240,243,250,0.88);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 1px 16px rgba(7,17,42,0.07);
+  transition:background 0.3s;
+}
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:700;color:var(--navy);
+  display:flex;align-items:center;gap:10px;letter-spacing:0.01em;
+}
+.nav-logo-mark{
+  width:32px;height:32px;border-radius:9px;
+  background:linear-gradient(135deg,var(--blue),var(--blue3));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:700;color:#fff;
+  box-shadow:0 4px 12px rgba(36,87,232,0.35);
+}
+.nav-links{list-style:none;display:flex;align-items:center;gap:0.1rem;}
+.nav-link{
+  text-decoration:none;font-size:12.5px;font-weight:500;
+  color:var(--text2);padding:6px 13px;border-radius:8px;transition:all 0.2s;letter-spacing:0.01em;
+}
+.nav-link:hover,.nav-link.active{color:var(--blue2);background:var(--blue-light);}
+.nav-cta{
+  background:var(--blue2);color:#fff !important;
+  padding:7px 18px;border-radius:9px;
+  font-size:12.5px;font-weight:600;text-decoration:none;transition:all 0.2s;
+  margin-left:6px;letter-spacing:0.02em;
+  box-shadow:0 4px 14px rgba(36,87,232,0.3);
+}
+.nav-cta:hover{background:var(--blue);transform:translateY(-1px);box-shadow:0 6px 20px rgba(36,87,232,0.4);}
+
+/* ========= HERO ========= */
+.hero{
+  position:relative;
+  min-height:calc(100vh - 68px);
+  display:flex;align-items:center;
+  padding:5rem 5.5vw 4.5rem;
+  overflow:hidden;
+  background:linear-gradient(150deg,#EEF2FF 0%,#F0F6FF 35%,#E8F5F3 70%,#F0F3FA 100%);
+}
+
+/* 3D animated background orbs */
+.orb-container{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.orb{
+  position:absolute;border-radius:50%;
+  filter:blur(60px);
+  will-change:transform;
+}
+.orb1{
+  width:700px;height:700px;
+  right:-120px;top:-200px;
+  background:radial-gradient(circle at 40% 40%,rgba(36,87,232,0.18) 0%,rgba(59,114,246,0.08) 50%,transparent 75%);
+  animation:orbFloat1 12s ease-in-out infinite;
+}
+.orb2{
+  width:500px;height:500px;
+  left:-80px;bottom:-100px;
+  background:radial-gradient(circle at 60% 60%,rgba(11,138,127,0.15) 0%,rgba(14,168,154,0.06) 50%,transparent 75%);
+  animation:orbFloat2 15s ease-in-out 2s infinite;
+}
+.orb3{
+  width:350px;height:350px;
+  left:40%;top:20%;
+  background:radial-gradient(circle,rgba(36,87,232,0.09) 0%,transparent 65%);
+  animation:orbFloat3 10s ease-in-out 1s infinite;
+}
+.orb4{
+  width:250px;height:250px;
+  right:25%;bottom:15%;
+  background:radial-gradient(circle,rgba(11,138,127,0.1) 0%,transparent 65%);
+  animation:orbFloat1 9s ease-in-out 3s infinite reverse;
+}
+
+/* Glowing 3D particle dots */
+.particles-canvas{position:absolute;inset:0;z-index:0;}
+
+/* Grid lines */
+.hero-grid{
+  position:absolute;inset:0;z-index:0;
+  background-image:
+    linear-gradient(rgba(36,87,232,0.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(36,87,232,0.035) 1px,transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 70% 75% at 55% 50%,black 20%,transparent 80%);
+}
+
+@keyframes orbFloat1{0%,100%{transform:translateY(0) translateX(0) scale(1);}33%{transform:translateY(-40px) translateX(20px) scale(1.06);}66%{transform:translateY(-15px) translateX(-25px) scale(0.96);}}
+@keyframes orbFloat2{0%,100%{transform:translateY(0) translateX(0) scale(1);}40%{transform:translateY(-30px) translateX(35px) scale(1.08);}70%{transform:translateY(20px) translateX(-15px) scale(0.94);}}
+@keyframes orbFloat3{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-25px) scale(1.1);}}
+
+.hero-content{position:relative;z-index:2;flex:1;max-width:660px;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.85);border:1px solid var(--border);
+  padding:7px 16px;border-radius:100px;
+  font-size:11.5px;font-weight:600;color:var(--blue2);
+  letter-spacing:0.07em;text-transform:uppercase;
+  margin-bottom:2rem;
+  box-shadow:0 4px 16px rgba(36,87,232,0.12);
+  backdrop-filter:blur(10px);
+  animation:fadeSlideUp 0.7s ease both;
+}
+.badge-pulse{
+  width:7px;height:7px;border-radius:50%;background:var(--teal2);
+  box-shadow:0 0 0 0 rgba(14,168,154,0.6);
+  animation:pulseDot 2s infinite;
+}
+@keyframes pulseDot{0%{box-shadow:0 0 0 0 rgba(14,168,154,0.6);}70%{box-shadow:0 0 0 8px rgba(14,168,154,0);}100%{box-shadow:0 0 0 0 rgba(14,168,154,0);}}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.2rem,5.5vw,5.8rem);
+  font-weight:700;line-height:1.02;
+  color:var(--navy);margin-bottom:0.25rem;
+  animation:fadeSlideUp 0.75s ease 0.1s both;
+  letter-spacing:-0.01em;
+}
+.hero h1 .name-accent{
+  background:linear-gradient(135deg,var(--blue2) 0%,var(--blue3) 60%,var(--teal2) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-designation{
+  font-size:0.92rem;font-weight:600;color:var(--teal);
+  letter-spacing:0.06em;text-transform:uppercase;
+  margin-bottom:1.3rem;
+  animation:fadeSlideUp 0.75s ease 0.18s both;
+}
+.hero-desc{
+  font-size:0.97rem;color:var(--text2);max-width:540px;
+  margin-bottom:2rem;line-height:1.78;
+  animation:fadeSlideUp 0.75s ease 0.26s both;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:2.4rem;animation:fadeSlideUp 0.75s ease 0.34s both;}
+.htag{
+  padding:5px 13px;border-radius:100px;font-size:11.5px;font-weight:500;
+  background:var(--blue-light);color:var(--blue2);border:1px solid var(--blue-mid);
+  letter-spacing:0.01em;
+}
+.htag.teal{background:var(--teal-light);color:var(--teal);border-color:#A7EDE7;}
+.htag.gold{background:var(--gold-light);color:var(--gold);border-color:var(--gold-mid);}
+
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;animation:fadeSlideUp 0.75s ease 0.42s both;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:10px;
+  font-size:13.5px;font-weight:600;text-decoration:none;
+  transition:all 0.22s;cursor:pointer;border:none;
+  font-family:'Outfit',sans-serif;letter-spacing:0.01em;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--blue2),var(--blue3));
+  color:#fff;
+  box-shadow:0 6px 20px rgba(36,87,232,0.35);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(36,87,232,0.45);}
+.btn-outline{background:rgba(255,255,255,0.9);color:var(--text2);border:1px solid var(--border2);backdrop-filter:blur(8px);}
+.btn-outline:hover{border-color:var(--blue2);color:var(--blue2);transform:translateY(-2px);box-shadow:var(--sh);}
+
+/* Profile Card */
+.hero-right{position:relative;z-index:2;margin-left:auto;animation:fadeSlideUp 0.85s ease 0.3s both;}
+.profile-card{
+  width:310px;
+  background:rgba(255,255,255,0.82);
+  border:1px solid rgba(255,255,255,0.9);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:
+    0 30px 80px rgba(7,17,42,0.18),
+    0 8px 32px rgba(36,87,232,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  backdrop-filter:blur(16px);
+  transform-style:preserve-3d;
+  transition:transform 0.35s ease,box-shadow 0.35s ease;
+}
+.profile-card:hover{
+  box-shadow:
+    0 50px 100px rgba(7,17,42,0.22),
+    0 12px 40px rgba(36,87,232,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.profile-img-area{
+  width:100%;height:230px;
+  background:linear-gradient(160deg,#DBEAFE 0%,#EEF2FF 50%,#E0F2FE 100%);
+  position:relative;overflow:hidden;
+  display:flex;align-items:flex-start;justify-content:center;
+}
+.profile-img-area::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:50px;
+  background:linear-gradient(transparent,rgba(255,255,255,0.7));
+  z-index:1;pointer-events:none;
+}
+.profile-photo{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  display:block;
+}
+.profile-initials{
+  width:88px;height:88px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue2),var(--blue3));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:#fff;
+  border:4px solid rgba(255,255,255,0.9);
+  box-shadow:0 8px 32px rgba(36,87,232,0.35);
+  margin-top:1.8rem;position:relative;z-index:2;
+}
+.profile-body{padding:1.1rem 1.3rem 1.3rem;}
+.profile-name{
+  font-family:'Cormorant Garamond',serif;font-size:1.18rem;
+  font-weight:700;color:var(--navy);margin-bottom:2px;
+}
+.profile-role{font-size:11.5px;color:var(--teal);font-weight:600;margin-bottom:14px;letter-spacing:0.04em;text-transform:uppercase;}
+.profile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
+.pstat{
+  text-align:center;padding:9px 4px;
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:11px;transition:all 0.2s;
+}
+.pstat:hover{background:var(--blue-light);border-color:var(--blue-mid);}
+.pstat-val{
+  display:block;font-family:'JetBrains Mono',monospace;
+  font-size:1.05rem;font-weight:600;color:var(--blue2);line-height:1.2;margin-bottom:3px;
+}
+.pstat-lbl{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;font-weight:500;}
+
+/* Floating badges on card */
+.float-badge{
+  position:absolute;
+  background:rgba(255,255,255,0.95);
+  border:1px solid var(--border);
+  border-radius:12px;padding:8px 12px;
+  font-size:11px;font-weight:600;
+  box-shadow:0 8px 24px rgba(7,17,42,0.12);
+  backdrop-filter:blur(12px);
+  z-index:10;white-space:nowrap;
+  animation:floatBadge 4s ease-in-out infinite;
+}
+.float-badge1{top:10px;right:-14px;color:var(--blue2);animation-delay:0s;}
+.float-badge2{bottom:80px;left:-20px;color:var(--teal);animation-delay:2s;}
+@keyframes floatBadge{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+
+.scroll-cue{
+  position:absolute;bottom:2.5rem;left:5.5vw;z-index:2;
+  display:flex;align-items:center;gap:10px;
+  font-size:11.5px;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;
+  animation:fadeSlideUp 1s ease 1s both;
+}
+.scroll-ring{
+  width:34px;height:34px;border-radius:50%;border:1px solid var(--border2);
+  background:rgba(255,255,255,0.8);
+  display:flex;align-items:center;justify-content:center;color:var(--text3);
+  font-size:15px;animation:bounceY 2.5s ease-in-out infinite;
+  backdrop-filter:blur(8px);
+}
+@keyframes bounceY{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+
+/* ========= MAIN ========= */
+main{max-width:1320px;margin:0 auto;padding:0 5.5vw;}
+section{padding:5rem 0;border-top:1px solid var(--border);}
+.section-eyebrow{
+  display:flex;align-items:center;gap:10px;
+  font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--blue2);font-weight:700;margin-bottom:0.8rem;
+  font-family:'JetBrains Mono',monospace;
+}
+.section-eyebrow::before{
+  content:'';width:22px;height:2px;
+  background:linear-gradient(90deg,var(--blue2),var(--teal2));
+  border-radius:2px;flex-shrink:0;
+}
+h2.stitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.2vw,2.9rem);
+  font-weight:700;color:var(--navy);margin-bottom:2.5rem;line-height:1.12;
+  letter-spacing:-0.01em;
+}
+
+/* ========= METRICS ========= */
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;}
+.metric{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:1.5rem 1rem;text-align:center;
+  box-shadow:var(--sh);transition:all 0.28s;
+  position:relative;overflow:hidden;
+  cursor:default;
+}
+.metric::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue2),var(--teal2));
+  transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease;
+}
+.metric::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(36,87,232,0.04),transparent);
+  opacity:0;transition:opacity 0.28s;
+}
+.metric:hover{transform:translateY(-5px);box-shadow:var(--sh2);}
+.metric:hover::before{transform:scaleX(1);}
+.metric:hover::after{opacity:1;}
+.metric-val{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:700;color:var(--blue2);
+  line-height:1;margin-bottom:7px;
+  position:relative;z-index:1;
+}
+.metric-lbl{font-size:10.5px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;position:relative;z-index:1;}
+
+/* ========= RESEARCH ========= */
+.res-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r2);
+  padding:2rem;box-shadow:var(--sh);margin-bottom:1.2rem;
+  transition:all 0.28s;position:relative;overflow:hidden;
+}
+.res-card::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--blue2),var(--teal2));
+  border-radius:3px 0 0 3px;
+  transform:scaleY(0);transform-origin:top;transition:transform 0.35s ease;
+}
+.res-card:hover{box-shadow:var(--sh2);border-color:var(--blue-mid);transform:translateY(-2px);}
+.res-card:hover::before{transform:scaleY(1);}
+.res-tag{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:10.5px;font-weight:700;color:var(--blue2);
+  background:var(--blue-light);border:1px solid var(--blue-mid);
+  padding:4px 12px;border-radius:100px;margin-bottom:14px;
+  text-transform:uppercase;letter-spacing:0.07em;font-family:'JetBrains Mono',monospace;
+}
+.res-tag.gold{color:var(--gold);background:var(--gold-light);border-color:var(--gold-mid);}
+.res-tag.teal{color:var(--teal);background:var(--teal-light);border-color:#A7EDE7;}
+.res-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.28rem;font-weight:700;color:var(--navy);
+  margin-bottom:0.5rem;line-height:1.3;
+}
+.res-desc{font-size:13.5px;color:var(--text2);margin-bottom:1rem;line-height:1.7;}
+.res-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.res-chip{
+  padding:4px 12px;border-radius:100px;font-size:11px;font-weight:500;
+  background:var(--bg3);border:1px solid var(--border);color:var(--text2);
+}
+.res-meta-box{
+  background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:12px;
+  padding:1rem 1.2rem;min-width:195px;flex-shrink:0;
+}
+.rml{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:5px;font-family:'JetBrains Mono',monospace;}
+.rmv{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.rms{font-size:12px;color:var(--text2);}
+.rma{margin-top:10px;font-size:11px;font-weight:700;color:var(--blue2);}
+
+/* ========= EDUCATION ========= */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.1rem;}
+.edu-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r2);
+  padding:1.7rem;box-shadow:var(--sh);transition:all 0.28s;
+  position:relative;overflow:hidden;
+}
+.edu-card::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--blue2),var(--teal2));
+  border-radius:4px 0 0 4px;
+}
+.edu-card:hover{transform:translateY(-5px);box-shadow:var(--sh2);border-color:var(--blue-mid);}
+.edu-degree{
+  font-family:'Cormorant Garamond',serif;font-size:2.2rem;
+  font-weight:700;color:var(--blue2);margin-bottom:2px;line-height:1;
+}
+.edu-year{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--text3);margin-bottom:9px;font-weight:500;
+}
+.edu-uni{font-weight:700;color:var(--navy);font-size:13.5px;margin-bottom:2px;}
+.edu-dept{font-size:12.5px;color:var(--text2);margin-bottom:11px;}
+.edu-thesis{font-size:12.5px;color:var(--text2);margin-bottom:12px;line-height:1.55;font-style:italic;}
+.edu-grade{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;
+  color:var(--gold);background:var(--gold-light);
+  border:1px solid var(--gold-mid);padding:4px 13px;border-radius:100px;font-weight:700;
+}
+
+/* ========= PUBLICATIONS ========= */
+.pub-list{display:flex;flex-direction:column;gap:0.8rem;}
+.pub-section-header{
+  padding:0.8rem 1.2rem;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:var(--r);
+  font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  font-family:'JetBrains Mono',monospace;
+}
+.pub-section-header.blue{color:var(--blue2);}
+.pub-section-header.gold{color:var(--gold);}
+.pub-section-header.teal{color:var(--teal);}
+
+.pub-item{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:1.2rem 1.5rem;
+  display:grid;grid-template-columns:48px 1fr;gap:1rem;
+  box-shadow:var(--sh);transition:all 0.22s;
+}
+.pub-item:hover{border-color:var(--blue-mid);transform:translateX(5px);box-shadow:var(--sh2);}
+.pub-num{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--blue-light);border:1px solid var(--blue-mid);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--blue2);font-weight:600;flex-shrink:0;
+}
+.pub-title{font-size:13.5px;font-weight:600;color:var(--navy);margin-bottom:5px;line-height:1.45;}
+.pub-meta{font-size:12px;color:var(--text3);line-height:1.5;}
+.pub-meta em{font-style:italic;color:var(--text2);}
+.pub-badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.pb{
+  padding:2px 10px;border-radius:100px;font-size:10.5px;font-weight:700;
+  font-family:'JetBrains Mono',monospace;
+}
+.pb.q1{background:var(--blue-light);border:1px solid var(--blue-mid);color:var(--blue2);}
+.pb.q2{background:var(--gold-light);border:1px solid var(--gold-mid);color:var(--gold);}
+.pb.accent{background:var(--teal-light);border:1px solid #A7EDE7;color:var(--teal);}
+.pb.grey{background:var(--bg3);border:1px solid var(--border);color:var(--text3);}
+
+/* ========= PATENTS ========= */
+.patent-list{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem;}
+.patent-item{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:1.2rem 1.5rem;
+  display:grid;grid-template-columns:48px 1fr;gap:1rem;
+  box-shadow:var(--sh);transition:all 0.22s;
+}
+.patent-item:hover{border-color:var(--gold-mid);transform:translateX(4px);}
+.patent-num{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--gold-light);border:1px solid var(--gold-mid);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);font-weight:700;
+}
+.patent-title{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px;line-height:1.45;}
+.patent-meta{font-size:11.5px;color:var(--text3);}
+
+/* ========= TIMELINE ========= */
+.timeline{display:flex;flex-direction:column;}
+.tl-item{display:grid;grid-template-columns:200px 1fr;gap:0 2.5rem;position:relative;}
+.tl-left{text-align:right;padding-top:2px;padding-bottom:2.5rem;}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--blue2);font-weight:600;}
+.tl-org{font-size:11.5px;color:var(--text3);margin-top:3px;font-weight:500;}
+.tl-right{
+  border-left:2px solid var(--border2);
+  padding-left:2.5rem;padding-bottom:2.5rem;position:relative;
+}
+.tl-right::before{
+  content:'';position:absolute;left:-8px;top:5px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--blue2);border:3px solid var(--bg);
+  box-shadow:0 0 0 3px rgba(36,87,232,0.2);
+}
+.tl-right h3{font-weight:700;font-size:1.05rem;color:var(--navy);margin-bottom:3px;}
+.tl-sub{font-size:12.5px;color:var(--teal);font-weight:600;margin-bottom:0.6rem;line-height:1.4;}
+.tl-right ul{list-style:none;margin-top:0.5rem;}
+.tl-right ul li{
+  font-size:13px;color:var(--text2);
+  padding:3px 0 3px 16px;position:relative;line-height:1.55;
+}
+.tl-right ul li::before{
+  content:'';position:absolute;left:0;top:11px;
+  width:5px;height:5px;border-radius:50%;background:var(--blue2);
+}
+
+/* ========= SKILLS ========= */
+.skills-group{margin-bottom:2.2rem;}
+.skills-group-label{
+  font-size:11px;font-weight:700;color:var(--blue2);
+  text-transform:uppercase;letter-spacing:0.1em;
+  margin-bottom:1rem;display:flex;align-items:center;gap:10px;
+  font-family:'JetBrains Mono',monospace;
+}
+.skills-group-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:0.75rem;}
+.skill-chip{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:0.85rem 1rem;
+  display:flex;align-items:center;gap:11px;
+  font-size:12.5px;color:var(--text);font-weight:500;
+  box-shadow:var(--sh);transition:all 0.22s;
+}
+.skill-chip:hover{border-color:var(--blue-mid);transform:translateY(-3px);box-shadow:var(--sh2);color:var(--blue2);}
+.skill-icon{
+  width:33px;height:33px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.skill-icon.b{background:var(--blue-light);}
+.skill-icon.t{background:var(--teal-light);}
+.skill-icon.g{background:var(--gold-light);}
+
+/* ========= AWARDS ========= */
+.award-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem;}
+.award-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:1.3rem 1.5rem;box-shadow:var(--sh);transition:all 0.28s;
+  position:relative;overflow:hidden;
+}
+.award-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue2),var(--teal2));
+  transform:scaleX(0);transform-origin:left;transition:transform 0.35s;
+}
+.award-card:hover{transform:translateY(-5px);box-shadow:var(--sh2);border-color:var(--blue-mid);}
+.award-card:hover::after{transform:scaleX(1);}
+.award-icon-wrap{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--gold-light);border:1px solid var(--gold-mid);
+  display:flex;align-items:center;justify-content:center;margin-bottom:11px;
+}
+.award-title{font-size:13px;font-weight:600;color:var(--navy);line-height:1.45;margin-bottom:5px;}
+.award-sub{font-size:11.5px;color:var(--text3);line-height:1.45;}
+
+/* ========= CONTACT ========= */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:1rem;}
+.contact-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:1.2rem 1.4rem;display:flex;align-items:center;gap:14px;
+  text-decoration:none;box-shadow:var(--sh);transition:all 0.22s;
+}
+.contact-card:hover{transform:translateY(-3px);box-shadow:var(--sh2);border-color:var(--blue-mid);}
+.contact-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--blue-light);border:1px solid var(--blue-mid);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-lbl{font-size:10.5px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;margin-bottom:2px;font-family:'JetBrains Mono',monospace;}
+.contact-val{font-size:13px;color:var(--navy);font-weight:600;}
+
+/* ========= MEMBERSHIP ========= */
+.member-list{display:flex;flex-direction:column;gap:0.75rem;}
+.member-item{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:1rem 1.4rem;display:flex;align-items:center;gap:14px;
+  box-shadow:var(--sh);transition:all 0.22s;
+}
+.member-item:hover{border-color:var(--blue-mid);transform:translateX(4px);}
+.member-dot{width:10px;height:10px;border-radius:50%;background:var(--blue2);flex-shrink:0;}
+.member-name{font-size:13.5px;font-weight:600;color:var(--navy);flex:1;}
+.member-id{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);}
+.member-period{font-size:11.5px;color:var(--text3);}
+
+/* ========= FOOTER ========= */
+footer{
+  text-align:center;padding:3.5rem 2rem;
+  border-top:1px solid var(--border);
+  background:linear-gradient(135deg,rgba(36,87,232,0.03),rgba(11,138,127,0.03));
+}
+.footer-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:5px;
+}
+.footer-sub{font-size:12.5px;color:var(--text3);margin-bottom:1.2rem;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;}
+.footer-link{font-size:12px;color:var(--text3);text-decoration:none;transition:color 0.2s;}
+.footer-link:hover{color:var(--blue2);}
+
+/* ========= ANIMATIONS ========= */
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* 3D tilt utility */
+.tilt3d{transform-style:preserve-3d;transition:transform 0.2s ease;}
+
+@media(max-width:1000px){.hero-right{display:none;}}
+@media(max-width:768px){
+  .tl-item{grid-template-columns:1fr;}
+  .tl-left{text-align:left;padding-bottom:0.3rem;}
+  .tl-right{margin-left:12px;}
+}
+@media(max-width:600px){
+  .hero{padding:2.5rem 5vw;}
+  main{padding:0 5vw;}
+  .hero h1{font-size:2.8rem;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <div class="nav-logo">
+    <div class="nav-logo-mark">JR</div>
+    Jairam Raigar
+  </div>
+  <ul class="nav-links">
+    <li><a href="#research"     class="nav-link">Research</a></li>
+    <li><a href="#education"    class="nav-link">Education</a></li>
+    <li><a href="#publications" class="nav-link">Publications</a></li>
+    <li><a href="#experience"   class="nav-link">Experience</a></li>
+    <li><a href="#skills"       class="nav-link">Skills</a></li>
+    <li><a href="#awards"       class="nav-link">Awards</a></li>
+    <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="orb-container">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+  </div>
+  <canvas class="particles-canvas" id="particleCanvas"></canvas>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-pulse"></span>
+      Postdoctoral Research Fellow · IIT Jammu · AMRL
+    </div>
+    <h1>Jairam<br/><span class="name-accent">Raigar</span></h1>
+    <div class="hero-designation">Postdoctoral Research Fellow &nbsp;|&nbsp; Additive Manufacturing &nbsp;|&nbsp; Laser–Material Interactions</div>
+    <p class="hero-desc">Designing the next generation of polymer composite materials for Laser Powder Bed Fusion, with research spanning thermoset-thermoplastic hybrid systems, in-situ process monitoring, AI-driven manufacturing, and duroplastic lattice metamaterials for aerospace, biomedical, and energy sectors.</p>
+    <div class="hero-tags">
+      <span class="htag">L-PBF / SLS</span>
+      <span class="htag">Thermoset Composites</span>
+      <span class="htag">Polymer Networks</span>
+      <span class="htag teal">In-situ Monitoring</span>
+      <span class="htag teal">Smart Manufacturing</span>
+      <span class="htag gold">TPMS Lattices</span>
+    </div>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="mailto:jrmkhajotiya@gmail.com">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get in Touch
+      </a>
+      <a class="btn btn-outline" href="https://scholar.google.com/citations?hl=en&user=wRYt5-oAAAAJ" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Google Scholar
+      </a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/jairam-raigar-53278191/" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+
+  <!-- Profile Card -->
+  <div class="hero-right">
+    <div style="position:relative;display:inline-block;">
+     
+     
+      <div class="profile-card tilt3d">
+        <div class="profile-img-area">
+          <img
+            src="assests/staff_pics/jairam_png1.png"
+            alt="Jairam Raigar"
+            class="profile-photo"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="profile-initials" style="display:none;">JR</div>
+        </div>
+        <div class="profile-body">
+          <div class="profile-name">Jairam Raigar, PhD</div>
+          <div class="profile-role">Postdoctoral Research Fellow</div>
+          <div class="profile-stats">
+            <div class="pstat">
+              <span class="pstat-val">13+</span>
+              <span class="pstat-lbl">Papers</span>
+            </div>
+            <div class="pstat">
+              <span class="pstat-val">9.08</span>
+              <span class="pstat-lbl">CGPA</span>
+            </div>
+            <div class="pstat">
+              <span class="pstat-val">6.8</span>
+              <span class="pstat-lbl">Best IF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <div class="scroll-ring">&#8595;</div>
+    Scroll to explore
+  </div>
+</header>
+
+<main>
+
+  <!-- METRICS -->
+  <section style="border-top:none;padding-top:3.5rem;" class="reveal">
+    <div class="metrics">
+      <div class="metric tilt3d"><span class="metric-val" data-target="13">0</span><span class="metric-lbl">Publications</span></div>
+      <div class="metric tilt3d"><span class="metric-val" data-target="4">0</span><span class="metric-lbl">Book Chapters</span></div>
+      <div class="metric tilt3d"><span class="metric-val" data-target="2" data-suffix="">2</span><span class="metric-lbl">Patents Filed</span></div>
+      <div class="metric tilt3d"><span class="metric-val" data-target="6.8" data-decimal="1">0</span><span class="metric-lbl">Best Impact Factor</span></div>
+      <div class="metric tilt3d"><span class="metric-val" data-target="9.08" data-decimal="2">0</span><span class="metric-lbl">PhD CGPA / 10</span></div>
+      <div class="metric tilt3d"><span class="metric-val" data-target="2" data-suffix="">2</span><span class="metric-lbl">Intl. Internships</span></div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="reveal" id="research">
+    <div class="section-eyebrow">Research Focus</div>
+    <h2 class="stitle">Research Overview</h2>
+
+    <!-- Postdoc -->
+    <div class="res-card tilt3d">
+      <div class="res-tag">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        Postdoctoral Research · June 2026 – Present
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:260px;">
+          <div class="res-title">Development of a Smart Selective Laser Sintering System with In-Situ Monitoring and AI-Driven Closed-Loop Process Control</div>
+          <p class="res-desc">Building an intelligent SLS platform integrating in-situ thermal and optical monitoring, machine vision, and artificial intelligence for autonomous additive manufacturing. Funded by IIT Jammu with JSPS postdoctoral fellowship proposal submitted to University of Tokyo in collaboration with Prof. Nagato.</p>
+          <div class="res-chips">
+            <span class="res-chip">Smart SLS Platform</span>
+            <span class="res-chip">AI Process Control</span>
+            <span class="res-chip">IR Thermography</span>
+            <span class="res-chip">Machine Vision</span>
+            <span class="res-chip">Closed-Loop Control</span>
+          </div>
+        </div>
+        <div class="res-meta-box">
+          <div class="rml">Institution</div>
+          <div class="rmv">IIT Jammu</div>
+          <div class="rms">AMRL, Dept. of Mechanical Engineering</div>
+          <div class="rma">IIT Jammu Funded Project</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PhD -->
+    <div class="res-card tilt3d">
+      <div class="res-tag gold">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        PhD Dissertation · Sept 2021 – May 2026
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:260px;">
+          <div class="res-title">Laser Powder Bed Fusion of Thermosets plus Thermoplastic Polymer Composites</div>
+          <p class="res-desc">Developed novel crosslinkable Phenolic-modified with thermoplastic PA12 and Epoxy-modified with elastomeric TPU powder feedstocks. Experimentally validated Selective Laser Polymerization (SLP) for semi-interpenetrating polymer networks with enhanced thermomechanical properties. Demonstrated a sustainable material-process-structure-property framework for duroplastic TPMS lattice metamaterials targeting automotive, aerospace, energy, and biomedical sectors.</p>
+          <div class="res-chips">
+            <span class="res-chip">L-PBF / SLS</span>
+            <span class="res-chip">Thermoset-Thermoplastic Hybrids</span>
+            <span class="res-chip">Curing Kinetics</span>
+            <span class="res-chip">X-ray µCT</span>
+            <span class="res-chip">TPMS Lattice Structures</span>
+            <span class="res-chip">Thermomechanical Testing</span>
+          </div>
+        </div>
+        <div class="res-meta-box" style="background:var(--gold-light);border-color:var(--gold-mid);">
+          <div class="rml" style="color:var(--text3);">Supervisor</div>
+          <div class="rmv">Dr. Rajkumar Velu</div>
+          <div class="rms">Assistant Professor-I, IIT Jammu</div>
+          <div class="rma" style="color:var(--gold);">MoE Institute PhD Fellowship</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Areas -->
+    <div class="res-card tilt3d">
+      <div class="res-tag teal">Areas of Research Interest</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
+        <div style="padding:11px 15px;background:var(--bg);border-radius:11px;border:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.5;">Laser-Based Additive Manufacturing of Polymers, Metals, Ceramics, and Composites</div>
+        <div style="padding:11px 15px;background:var(--bg);border-radius:11px;border:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.5;">Powder Feedstock Development and Process–Structure–Property Relationships</div>
+        <div style="padding:11px 15px;background:var(--bg);border-radius:11px;border:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.5;">Smart Manufacturing Systems and AI-Driven Process Control</div>
+        <div style="padding:11px 15px;background:var(--bg);border-radius:11px;border:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.5;">Multifunctional Lattice Structures for Aerospace and Biomedical Applications</div>
+        <div style="padding:11px 15px;background:var(--bg);border-radius:11px;border:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.5;">Sustainable and Scalable Manufacturing Technologies</div>
+        <div style="padding:11px 15px;background:var(--bg);border-radius:11px;border:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.5;">3D CAD Modelling, Simulation, and Finite Element Analysis</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="reveal" id="education">
+    <div class="section-eyebrow">Academic Background</div>
+    <h2 class="stitle">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card tilt3d">
+        <div class="edu-degree">PhD</div>
+        <div class="edu-year">Sept 2021 – May 2026</div>
+        <div class="edu-uni">Indian Institute of Technology Jammu</div>
+        <div class="edu-dept">Mechanical Engineering</div>
+        <p class="edu-thesis">Laser Powder Bed Fusion of Thermosets plus Thermoplastic Polymer Composites</p>
+        <span class="edu-grade">CGPA &nbsp;9.08 / 10</span>
+      </div>
+      <div class="edu-card tilt3d">
+        <div class="edu-degree">MTech</div>
+        <div class="edu-year">July 2017 – June 2019</div>
+        <div class="edu-uni">Dr. B R Ambedkar NIT Jalandhar</div>
+        <div class="edu-dept">Manufacturing Technology</div>
+        <p class="edu-thesis">A Decision Support System for the Selection of an Additive Manufacturing Process using a New Hybrid MCDM Technique</p>
+        <span class="edu-grade">CGPA &nbsp;7.74 / 10</span>
+      </div>
+      <div class="edu-card tilt3d">
+        <div class="edu-degree">BTech</div>
+        <div class="edu-year">July 2012 – June 2016</div>
+        <div class="edu-uni">PDPM IIITDM Jabalpur</div>
+        <div class="edu-dept">Mechanical Engineering</div>
+        <p class="edu-thesis">Foundation in mechanical design, manufacturing processes, FEA, and engineering fundamentals. Merit-cum-means scholarship recipient.</p>
+        <span class="edu-grade">CGPA &nbsp;6.7 / 10</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="reveal" id="publications">
+    <div class="section-eyebrow">Research Output</div>
+    <h2 class="stitle">Publications</h2>
+
+    <div class="pub-list">
+      <div class="pub-section-header blue">Peer-Reviewed Journal Articles</div>
+
+<div class="pub-item">
+  <div class="pub-num">01</div>
+  <div>
+    <div class="pub-title">Laser-Powder Bed Fusion Additive Manufacturing of Polyurethane-Modified Epoxy Thermoset Composites: Curing Kinetics, Process Optimization, and Thermomechanical Performance</div>
+    <div class="pub-meta">Raigar J., Velu R., Hsu C., Jeng JY. · <em>Journal of Manufacturing Processes</em>, 2026, Elsevier · Decision under process</div>
+    <div class="pub-badges"><span class="pb q1">Q1</span><span class="pb q1">IF 6.8</span><span class="pb accent">Under Review</span></div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-num">02</div>
+  <div>
+    <div class="pub-title">In-Situ Thermal Monitoring of L-PBF Process for TPU/Epoxy Thermoset Polymer Networks</div>
+    <div class="pub-meta">Raigar J., Velu R., Bakhshi H. · <em>Journal of Polymer Science</em>, 2026, Wiley</div>
+    <div class="pub-badges"><span class="pb q1">Q1</span><span class="pb q1">IF 3.6</span><span class="pb accent">Communicated</span></div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-num">03</div>
+  <div>
+    <div class="pub-title">Additive Manufacturing of TPU/Epoxy Thermoset Networks via Laser Powder Bed Fusion: Processing–Structure–Property Correlations</div>
+    <div class="pub-meta">Raigar J., Velu R., Prajapati MJ., Jeng JY. · <em>Polymer</em>, Vol. 358, Article 130222, 2026, Elsevier</div>
+    <div class="pub-badges"><span class="pb q1">Q1</span><span class="pb q1">IF 4.5</span></div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-num">04</div>
+  <div>
+    <div class="pub-title">Thermomechanical Performance of Phenolic Thermoset Composites via Laser Powder Bed Fusion in Additive Manufacturing</div>
+    <div class="pub-meta">Raigar J., Velu R., Bakhshi H. · <em>Journal of Manufacturing Processes</em>, Vol. 49, pp. 399–414, 2025, Elsevier</div>
+    <div class="pub-badges"><span class="pb q1">Q1</span><span class="pb q1">IF 6.8</span></div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-num">05</div>
+  <div>
+    <div class="pub-title">Optimization of Selective Laser Sintering Process Parameters for Phenolic Thermoset Composites using X-ray CT Analysis</div>
+    <div class="pub-meta">Raigar J., Velu R., Agrawal AK., Bakhshi H. · <em>Materialia</em>, Vol. 42, Article 102451, 2025, Elsevier</div>
+    <div class="pub-badges"><span class="pb q2">Q2</span><span class="pb q2">IF 3.0</span></div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-num">06</div>
+  <div>
+    <div class="pub-title">A Decision Support System for the Selection of an Additive Manufacturing Process using a New Hybrid MCDM Technique</div>
+    <div class="pub-meta">Raigar J., Sharma VS., Srivastava S. et al. · <em>Sadhana</em>, Vol. 45, Art. 101, 2020, Springer</div>
+    <div class="pub-badges"><span class="pb q2">Q2</span><span class="pb q2">IF 1.4</span></div>
+  </div>
+</div>
+      <div class="pub-section-header gold" style="margin-top:0.5rem;">Book Chapters</div>
+
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--gold-light);border-color:var(--gold-mid);color:var(--gold);">BC1</div>
+        <div>
+          <div class="pub-title">Impact of Additive Manufacturing on the Environment and Supply Chain Management</div>
+          <div class="pub-meta">Raigar J., Ramachandran MK., Kannan M., Velu R. · Additively Manufactured Smart Materials and Structures, pp. 383–403, 2025, Elsevier</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--gold-light);border-color:var(--gold-mid);color:var(--gold);">BC2</div>
+        <div>
+          <div class="pub-title">Selective Laser Sintering of CNTs-PA12 Polymer Nanocomposites</div>
+          <div class="pub-meta">Raigar J., Velu R. · Advances in Additive Manufacturing Vol. II, AIMTDR-2023, Springer Singapore, 2025</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--gold-light);border-color:var(--gold-mid);color:var(--gold);">BC3</div>
+        <div>
+          <div class="pub-title">State-of-the-Art Overview and Recent Trends in Biomedical Devices Using Digital Manufacturing</div>
+          <div class="pub-meta">Ramachandran MK., Raigar J., Kannan M., Velu R. · Digital Design and Manufacturing of Medical Devices and Systems, Springer, 2023</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--gold-light);border-color:var(--gold-mid);color:var(--gold);">BC4</div>
+        <div>
+          <div class="pub-title">Comparison of MCDM Techniques for the Selection of Polymer-Based Additive Manufacturing Processes</div>
+          <div class="pub-meta">Raigar J., Srivastava S., Sharma VS. et al. · Decision Models in Applied Manufacturing Environment, Apple Academic Press, 2023</div>
+        </div>
+      </div>
+
+      <div class="pub-section-header teal" style="margin-top:0.5rem;">Conference Papers</div>
+
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--teal-light);border-color:#A7EDE7;color:var(--teal);">C1</div>
+        <div>
+          <div class="pub-title">Design and Fabrication of Urethane-Modified Epoxy Duroplastic TPMS Lattice Structures via Polymer Powder Bed Fusion Additive Manufacturing</div>
+          <div class="pub-meta">Raigar J., Velu R., Jeng JY. · <em>36th CIRP Design Conference (CIRP Design 2026)</em>, Tokyo, Japan — Oral Presentation</div>
+          <div class="pub-badges"><span class="pb accent">CIRP Procedia 2026</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--teal-light);border-color:#A7EDE7;color:var(--teal);">C2</div>
+        <div>
+          <div class="pub-title">Selective Laser Polymerization of Thermosetting Polymers: A Sustainable Paradigm for Automotive and Aerospace Advancements</div>
+          <div class="pub-meta">Raigar J., Velu R. · ISCMEA-2024, IIT Madras, India, February 2024</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--teal-light);border-color:#A7EDE7;color:var(--teal);">C3</div>
+        <div>
+          <div class="pub-title">Selective Laser Sintering of CNTs-PA12 Polymer Nanocomposites</div>
+          <div class="pub-meta">Raigar J., Velu R. · AIMTDR 2023, IIT BHU Varanasi, India, December 2023</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-num" style="background:var(--teal-light);border-color:#A7EDE7;color:var(--teal);">C4</div>
+        <div>
+          <div class="pub-title">Selection of an Additive Manufacturing Technology using Hybrid AHP-TOPSIS Technique</div>
+          <div class="pub-meta">Raigar J., Sharma VS. · CPIE 2019, NIT Jalandhar, India, June 2019</div>
+        </div>
+      </div>
+
+      <div class="pub-item" style="background:var(--blue-light);border-color:var(--blue-mid);">
+        <div class="pub-num">+</div>
+        <div>
+          <div class="pub-title" style="color:var(--blue2);">Full publication list on Google Scholar</div>
+          <div class="pub-meta">All journals, conferences, book chapters, and citations</div>
+          <div class="pub-badges">
+            <a href="https://scholar.google.com/citations?hl=en&user=wRYt5-oAAAAJ" target="_blank" class="pb q1" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              View on Google Scholar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Patents -->
+    <div class="section-eyebrow" style="margin-top:3rem;">Patents Filed</div>
+    <div class="patent-list">
+      <div class="patent-item">
+        <div class="patent-num">P01</div>
+        <div>
+          <div class="patent-title">A Hybrid Polyamide12-Modified Phenolic Thermoset Powder Composition and Method of Selective Laser Polymerization for Producing Three-Dimensional Crosslinked Polymer Networks</div>
+          <div class="patent-meta">Indian Patent Application · Filed</div>
+        </div>
+      </div>
+      <div class="patent-item">
+        <div class="patent-num">P02</div>
+        <div>
+          <div class="patent-title">Crosslinkable Elastomer-Modified Epoxy Thermosetting Powder Composition and Methods for Producing Semi-Interpenetrating Polymer Networks through Selective Laser Polymerization Additive Manufacturing</div>
+          <div class="patent-meta">Indian Patent Application · Filed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="reveal" id="experience">
+    <div class="section-eyebrow">Professional Experience</div>
+    <h2 class="stitle">Research &amp; Academic Experience</h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">June 2026 – Present</div>
+          <div class="tl-org">IIT Jammu, India</div>
+        </div>
+        <div class="tl-right">
+          <h3>Postdoctoral Research Fellow</h3>
+          <div class="tl-sub">Additive Manufacturing Research Laboratory (AMRL) · Department of Mechanical Engineering</div>
+          <ul>
+            <li>Developing a smart SLS system with in-situ thermal and optical monitoring with AI-driven closed-loop process control</li>
+            <li>Pursuing JSPS postdoctoral fellowship proposal with Prof. Nagato, University of Tokyo (submitted July 2026)</li>
+            <li>Coordinating research collaboration between IIT Jammu and international partners</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Sept 2021 – May 2026</div>
+          <div class="tl-org">IIT Jammu, India</div>
+        </div>
+        <div class="tl-right">
+          <h3>Doctoral Researcher &amp; Teaching Assistant</h3>
+          <div class="tl-sub">Department of Mechanical Engineering</div>
+          <ul>
+            <li>Contributed to establishment and operational development of AMRL, including equipment procurement, SOPs, and safety compliance</li>
+            <li>TA for Engineering Mechanics, Mechanics of Solids, Additive Manufacturing, Powder Bed Fusion, and Manufacturing Processes</li>
+            <li>Trained undergraduate, postgraduate, and doctoral researchers in AM and materials characterization</li>
+            <li>Contributed to collaborative proposals with DST/CEFIPRA, NTU Taiwan, and UTBM France</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Dec 2024 – Feb 2025</div>
+          <div class="tl-org">NTUST, Taiwan</div>
+        </div>
+        <div class="tl-right">
+          <h3>Visiting Researcher — TEEP Program</h3>
+          <div class="tl-sub">Taiwan High-Speed 3D Printing Research Center · Funded by MoE Taiwan (NT$30,000/month)</div>
+          <ul>
+            <li>Material characterization and laser processing via SLS-based PBF additive manufacturing</li>
+            <li>Performance evaluation of thermoset-based hybrid polymer systems for advanced functional applications</li>
+            <li>Under mentorship of Prof. Jeng-Ywan Jeng, Distinguished Professor, NTUST</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">July 2024 – Sept 2024</div>
+          <div class="tl-org">NTUST, Taiwan</div>
+        </div>
+        <div class="tl-right">
+          <h3>Research Intern — IIPP Program</h3>
+          <div class="tl-sub">Taiwan High-Speed 3D Printing Research Center · Funded by NSTC Taiwan (NT$30,000/month)</div>
+          <ul>
+            <li>Experimental investigations on thermoset polymer composites using SLS additive manufacturing</li>
+            <li>Under mentorship of Dr. Chi-Pin Hsu and Prof. Jeng-Ywan Jeng</li>
+            <li>Awarded ANRF International Travel Support for SFF2025, Austin, Texas, USA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">July 2017 – June 2019</div>
+          <div class="tl-org">NIT Jalandhar, India</div>
+        </div>
+        <div class="tl-right">
+          <h3>Teaching Assistant &amp; MTech Researcher</h3>
+          <div class="tl-sub">Department of Industrial and Production Engineering</div>
+          <ul>
+            <li>Developed a decision support system for additive manufacturing process selection using hybrid BWM-PIV MCDM technique</li>
+            <li>GATE Scholar under Ministry of Education fellowship</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="reveal" id="skills">
+    <div class="section-eyebrow">Technical Expertise</div>
+    <h2 class="stitle">Skills &amp; Instrumentation</h2>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Additive Manufacturing Systems</div>
+      <div class="skills-grid">
+        <div class="skill-chip tilt3d"><div class="skill-icon t"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B8A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>SLS — Sinterit Lisa X + In-house Workcell</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon t"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B8A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16,3 21,3 21,8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21,16 21,21 16,21"/><line x1="15" y1="15" x2="21" y2="21"/></svg></div>FDM — Creality K2+, Snapmaker J1/J1s</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon t"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B8A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/></svg></div>DLP Vat Photo-polymerization</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon t"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B8A7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4m-5 0h5"/></svg></div>Multi-Jet Printing — MJP 2500, 3D Systems</div>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Materials Characterization</div>
+      <div class="skills-grid">
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>FE-SEM — JEOL JSM7900</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div>FTIR Spectroscopy — Nicolet iS50</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.56 2.9A7 7 0 1 0 20.54 11"/><path d="M12 6v6l4 2"/></svg></div>TGA / DSC / DMA / TMA — NETZSCH</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></svg></div>Synchrotron X-ray µCT</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>UTM, Impact, Hardness Testing</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>Digital Image Correlation (DIC/VIC)</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg></div>IR Thermography — Optrix PI640</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg></div>Optical Microscopy — Olympus DSX 510</div>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Software and Computational Tools</div>
+      <div class="skills-grid">
+        <div class="skill-chip tilt3d"><div class="skill-icon g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 2,7 12,12 22,7"/><polyline points="2,17 12,22 22,17"/><polyline points="2,12 12,17 22,12"/></svg></div>SolidWorks / CATIA V5 / Creo 4.0 / Blender</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg></div>ANSYS (Static and Thermal) / ABAQUS</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div>MATLAB / C / C++</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>Minitab / OriginPro / ImageJ / Dragonfly</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/></svg></div>ChemDraw / GaussView</div>
+        <div class="skill-chip tilt3d"><div class="skill-icon g"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/></svg></div>Ubuntu Linux / Windows</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="reveal" id="awards">
+    <div class="section-eyebrow">Recognition</div>
+    <h2 class="stitle">Honors &amp; Awards</h2>
+    <div class="award-grid">
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg></div>
+        <div class="award-title">ANRF International Travel Support (ITS)</div>
+        <div class="award-sub">SFF2025, Austin, Texas, USA · 2025</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+        <div class="award-title">TEEP Fellowship — MoE Taiwan</div>
+        <div class="award-sub">NT$30,000/month · Dec 2024 – Feb 2025</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+        <div class="award-title">IIPP Fellowship — NSTC Taiwan</div>
+        <div class="award-sub">NT$30,000/month · Jul – Sep 2024</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="award-title">Institute Doctoral Fellowship — MoE India</div>
+        <div class="award-sub">Sept 2021 – May 2026 · IIT Jammu</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg></div>
+        <div class="award-title">GATE Scholarship for MTech</div>
+        <div class="award-sub">Ministry of Education, India · 2017–2019</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg></div>
+        <div class="award-title">Qualified GATE 2016, 2017, 2021</div>
+        <div class="award-sub">Mechanical Engineering — All three attempts</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="award-title">Merit-cum-Means Scholarship</div>
+        <div class="award-sub">PDPM IIITDM Jabalpur · 2013–2016</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="award-title">Certificate — 3-Minute PhD Thesis Presentation</div>
+        <div class="award-sub">IIT Jammu · April 2026</div>
+      </div>
+      <div class="award-card tilt3d">
+        <div class="award-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9A4A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg></div>
+        <div class="award-title">Certificate of Appreciation — BIS Workshop Organizer</div>
+        <div class="award-sub">Materials and Manufacturing: Metrology and Standardization · IIT Jammu · Oct 2024</div>
+      </div>
+    </div>
+
+    <!-- Memberships -->
+    <div class="section-eyebrow" style="margin-top:3rem;">Professional Memberships</div>
+    <div class="member-list" style="margin-top:1rem;">
+      <div class="member-item">
+        <div class="member-dot"></div>
+        <div class="member-name">Society of Manufacturing Engineers (SME)</div>
+        <div class="member-id">ID: 000016979312-0</div>
+        <div class="member-period">2023 – Present</div>
+      </div>
+      <div class="member-item">
+        <div class="member-dot"></div>
+        <div class="member-name">American Society of Mechanical Engineers (ASME)</div>
+        <div class="member-id"></div>
+        <div class="member-period">2024 – Present</div>
+      </div>
+    </div>
+
+    <!-- Journal Reviewer -->
+    <div class="section-eyebrow" style="margin-top:3rem;">Journal Reviewer</div>
+    <div class="member-list" style="margin-top:1rem;">
+      <div class="member-item">
+        <div class="member-dot" style="background:var(--teal2);"></div>
+        <div class="member-name">Progress in Additive Manufacturing — Springer Nature</div>
+        <div class="member-period">Dec 2025 – Present</div>
+      </div>
+      <div class="member-item">
+        <div class="member-dot" style="background:var(--teal2);"></div>
+        <div class="member-name">Discover Materials — Springer Nature</div>
+        <div class="member-period">May 2026 – Present</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="reveal" id="contact">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="stitle">Contact &amp; Profiles</h2>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:jrmkhajotiya@gmail.com">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div><div class="contact-lbl">Personal Email</div><div class="contact-val">jrmkhajotiya@gmail.com</div></div>
+      </a>
+      <a class="contact-card" href="mailto:jairam.raigar@iitjammu.ac.in">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div><div class="contact-lbl">Institute Email</div><div class="contact-val">jairam.raigar@iitjammu.ac.in</div></div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/jairam-raigar-53278191/" target="_blank">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#1742C8"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </div>
+        <div><div class="contact-lbl">LinkedIn</div><div class="contact-val">jairam-raigar</div></div>
+      </a>
+      <a class="contact-card" href="https://scholar.google.com/citations?hl=en&user=wRYt5-oAAAAJ" target="_blank">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div><div class="contact-lbl">Google Scholar</div><div class="contact-val">View Publications</div></div>
+      </a>
+      <a class="contact-card" href="tel:+919407001530">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div><div class="contact-lbl">Phone</div><div class="contact-val">+91 94070 01530</div></div>
+      </a>
+      <div class="contact-card" style="cursor:default;">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1742C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div><div class="contact-lbl">Location</div><div class="contact-val">IIT Jammu, J&K 181221, India</div></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-name">Jairam Raigar, PhD</div>
+  <div class="footer-sub">Postdoctoral Research Fellow &nbsp;·&nbsp; Additive Manufacturing Research Laboratory &nbsp;·&nbsp; IIT Jammu</div>
+  <div class="footer-links">
+    <a href="mailto:jrmkhajotiya@gmail.com" class="footer-link">Email</a>
+    <a href="https://scholar.google.com/citations?hl=en&user=wRYt5-oAAAAJ" class="footer-link" target="_blank">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/jairam-raigar-53278191/" class="footer-link" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+/* ──────── Particle Canvas ──────── */
+(function(){
+  const canvas = document.getElementById('particleCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], mouse = {x:null,y:null};
+  const N = 80;
+
+  function resize(){
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function rand(min,max){return Math.random()*(max-min)+min;}
+
+  class Particle{
+    constructor(){this.reset(true);}
+    reset(init){
+      this.x = rand(0,W); this.y = rand(0,H);
+      this.vx = rand(-0.3,0.3); this.vy = rand(-0.3,0.3);
+      this.r = rand(1,3);
+      this.alpha = rand(0.15, 0.55);
+      this.hue = Math.random() < 0.65 ? rand(220,240) : rand(170,185);
+      this.glow = Math.random() < 0.25;
+    }
+    update(){
+      this.x += this.vx; this.y += this.vy;
+      if(this.x<0||this.x>W) this.vx*=-1;
+      if(this.y<0||this.y>H) this.vy*=-1;
+    }
+    draw(){
+      if(this.glow){
+        const g = ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r*5);
+        g.addColorStop(0,`hsla(${this.hue},80%,65%,${this.alpha})`);
+        g.addColorStop(1,`hsla(${this.hue},80%,65%,0)`);
+        ctx.beginPath();ctx.arc(this.x,this.y,this.r*5,0,Math.PI*2);
+        ctx.fillStyle=g;ctx.fill();
+      }
+      ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+      ctx.fillStyle=`hsla(${this.hue},75%,60%,${this.alpha})`;
+      ctx.fill();
+    }
+  }
+
+  for(let i=0;i<N;i++) particles.push(new Particle());
+
+  function drawConnections(){
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<100){
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x,particles[i].y);
+          ctx.lineTo(particles[j].x,particles[j].y);
+          ctx.strokeStyle=`rgba(36,87,232,${0.06*(1-dist/100)})`;
+          ctx.lineWidth=0.8;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function animate(){
+    ctx.clearRect(0,0,W,H);
+    drawConnections();
+    particles.forEach(p=>{p.update();p.draw();});
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+/* ──────── Scroll Reveal ──────── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('visible');});
+},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+/* ──────── Active Nav ──────── */
+const navLinks = document.querySelectorAll('.nav-link:not(.nav-cta)');
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-130) cur=s.id;});
+  navLinks.forEach(l=>{
+    l.classList.remove('active');
+    if(l.getAttribute('href')==='#'+cur) l.classList.add('active');
+  });
+});
+
+/* ──────── 3D Tilt ──────── */
+document.querySelectorAll('.tilt3d').forEach(el=>{
+  el.addEventListener('mousemove',e=>{
+    const r=el.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-0.5;
+    const y=(e.clientY-r.top)/r.height-0.5;
+    el.style.transform=`perspective(700px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-3px)`;
+  });
+  el.addEventListener('mouseleave',()=>{el.style.transform='';});
+});
+
+/* ──────── Counter Animation ──────── */
+const counterObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target;
+      const target = parseFloat(el.getAttribute('data-target'));
+      if(isNaN(target)){return;}
+      const dec = parseInt(el.getAttribute('data-decimal')||'0');
+      const plus = el.closest('.metric')?.querySelector('.metric-lbl')?.textContent.includes('Publication') ||
+                   el.closest('.metric')?.querySelector('.metric-lbl')?.textContent.includes('Chapter');
+      const dur=1400, step=16;
+      let start=0;
+      const inc=target/(dur/step);
+      const timer=setInterval(()=>{
+        start+=inc;
+        if(start>=target){start=target;clearInterval(timer);}
+        el.textContent=dec>0 ? start.toFixed(dec) : Math.floor(start)+(plus?'+':'');
+      },step);
+      counterObs.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.metric-val[data-target]').forEach(c=>counterObs.observe(c));
+
+/* ──────── Profile card 3D on mouse ──────── */
+const pcard = document.querySelector('.profile-card');
+if(pcard){
+  pcard.addEventListener('mousemove',e=>{
+    const r=pcard.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-0.5;
+    const y=(e.clientY-r.top)/r.height-0.5;
+    pcard.style.transform=`perspective(900px) rotateY(${x*12}deg) rotateX(${-y*12}deg) scale(1.03)`;
+  });
+  pcard.addEventListener('mouseleave',()=>{pcard.style.transform='';});
+}
+</script>
+</body>
+</html>
